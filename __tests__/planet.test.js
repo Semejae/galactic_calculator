@@ -4,17 +4,40 @@ import Planet from './../src/planet.js';
 describe ('Planet', () => {
   
   test('should return planet function', () => {
-    const planet = new Planet();
+    const planet = new Planet(50);
+    expect(planet.age).toEqual(50);
     expect(planet.name).toEqual(['mercury','venus','mars','jupiter','earth']);
     expect(planet.year).toEqual([.24,.62,1.88,11.86,1]);
-    expect(planet.expectancy).toEqual([-2,-3,-4,-5,-1]);
+    expect(planet.expectancy).toEqual(80);
+    expect(planet.mercuryAge).toEqual(0);
+    expect(planet.venusAge).toEqual(0);
+    expect(planet.marsAge).toEqual(0);
+    expect(planet.jupiterAge).toEqual(0);
+    expect(planet.earthAge).toEqual(0);
+    expect(planet.yearsLeftToLive).toEqual(0);
   });
 });
 
-describe ('age', () => {
 
-  test('should return age function', () => {
-    let age = Planet.year + Planet.expectancy;
-    expect(age).toEqual(Planet.year + Planet.expectancy);
+describe ('convertToYears', () => {
+
+  test('should convert earth years to mercury years', () => {
+    const planet = new Planet(50);
+    planet.convertToYears();
+    expect(planet.mercuryAge).toEqual(208);
+    expect(planet.venusAge).toEqual(81);
+    expect(planet.marsAge).toEqual(27);
+    expect(planet.jupiterAge).toEqual(4);
+    expect(planet.earthAge).toEqual(50);
   });
 });  
+
+describe ('lifeExpectancy', () => {
+
+  test('should subtract age from expectancy', () => {
+    const planet = new Planet(50);
+    planet.lifeExpectancy();
+    expect(lifeExpectancy).toEqual()
+
+  });
+});
