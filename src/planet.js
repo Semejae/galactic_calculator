@@ -31,12 +31,11 @@ export default class Planet {
     if (this.age < this.expectancy) {
       this.yearsLeftToLive = this.expectancy - this.age;
       return this.yearsLeftToLive;
-    } else if (this.age > this.expectancy) {
+    } else  (this.age > this.expectancy) 
       this.yearsOverExpectancy = this.age - this.expectancy;
       return this.yearsOverExpectancy;
-    }
   };
-
+}
 
 
 
