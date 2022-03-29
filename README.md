@@ -18,7 +18,7 @@
 *_expect(planet.marsAge).toEqual(0);_
 *_expect(planet.jupiterAge).toEqual(0);_
 *_expect(planet.earthAge).toEqual(0);_
-*_expect(planet.yearsLeftToLive).toEqual(0);_
+      *_expect(planet.yearsLeftToLive).toEqual(0);_
 
 
 *_describe: convertToYears()_
@@ -62,6 +62,15 @@ _this page shows you your age and expectancy on planets_
 * _Open file in your VS Code to edit_
 * _To edit but not make perminant changes, create a new branch using 'git branch [new-branch-name]'_
 * _Switch to that branch and edit away by using 'git checkout [branch-you'd-like-to-change-to]'_
+* _Initialize NPM inside of your root directory your-project_
+* _run npm init -y_
+* _In the package.json file, change the "name" to your-project's name. Update "description", "author" and "license" as well (”MIT”)_
+* _Install packages references from `package.json` that you copied over. 
+* _run `npm install` - this creates `package-lock.json` and `node_modules`_
+* _Add a eslintrc and babelrc file. Copy if need be._
+* _Create .gitignore file_  
+* _git add .gitignore and package.json_
+* _git commit -m "adding .gitignore file" and git commit -m "adding package.json file"_
 * _also you can view the website @ https://github.com/Semejae/galactic_calculator.git
 
 ## known bugs
