@@ -1,5 +1,6 @@
 'use strict';
 
+
 export default class Planet {
   constructor(age) {
     this.name = ['mercury','venus','mars','jupiter','earth'];
@@ -12,6 +13,8 @@ export default class Planet {
     this.jupiterAge = 0;
     this.earthAge = 0;
     this.yearsLeftToLive = 0;
+    this.yearsOverExpectancy = 0;
+    this.planetsAge = [this.mercuryAge,this.venusAge,this.marsAge,this.jupiterAge,this.earthAge];
     // console.log();
   }
 
@@ -21,23 +24,24 @@ export default class Planet {
     this.marsAge = parseInt((this.age/1.88).toFixed(0));
     this.jupiterAge = parseInt((this.age/11.86).toFixed(0));
     this.earthAge = parseInt((this.age/1).toFixed(0));
-    this.yearsLeftToLive = parseInt((this.age).toFixed(0));
+    this.yearsLeftToLive = parseInt((this.age));
   }
 
   lifeExpectancy(){
     if (this.age < this.expectancy) {
       this.yearsLeftToLive = this.expectancy - this.age;
-    } else if (this.age > this.expectancy){
-      return alert('you are dead')
+      return this.yearsLeftToLive;
+    } else if (this.age > this.expectancy) {
+      this.yearsOverExpectancy = this.age - this.expectancy;
+      return this.yearsOverExpectancy;
     }
-  }
-}
-
-console.log();
-// console.log(mercury,venus,mars,jupiter,earth,age);
+  };
 
 
 
 
 
 
+
+
+console.log(alert);
